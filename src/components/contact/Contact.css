@@ -1,0 +1,77 @@
+.contact-section {
+    background:linear-gradient(#007BFF,#512b97);
+    color:#f9f9f9;
+    align-items: center;
+    height: 50vh;
+    padding: 2rem;
+    margin:0;
+    padding-top: 75px;
+    background-color: #f9f9f9;
+    text-align: center;
+    
+  }
+
+  .contact-info  {
+    display: flex;
+     gap: 50px;
+     justify-content: center;
+    align-items: center;
+    
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .contact-section p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  
+  .contact-info p {
+
+    padding: 10px;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  }
+
+
+  .mail{
+    background-color: #e3671b;
+    color: #f9f9f9;
+  }
+  
+  .linkedin{
+    border: 1px solid #f9f9f9;
+  } 
+
+   .linkedin:hover{
+    background-color: #918080;
+  }
+
+  .mail:hover{
+    background-color: #f68641;
+  }
+  
+  
+  
+.bi-envelope-at{
+   color: #f7f4f4;
+   padding-left: 10px;
+}
+ 
+.linkedin-btn{
+    color: #f6efef;
+    padding-left: 10px;
+}
+
+.contact-info a{
+    text-decoration: none;
+    color: #f9f9f9;
+}
+ 
+
+
+  
