@@ -23,7 +23,7 @@ const ContactSection = () => {
 
         <p className="linkedin">
         
-        <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/shaik-rasool-bi/" target="_blank" rel="noopener noreferrer">
         <strong>Linkedin</strong>
           <span className="bi bi-linkedin linkedin-btn"> </span>
         </a>
