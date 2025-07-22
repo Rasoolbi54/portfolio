@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-scroll'; // Ensure you are importing Link from react-scroll
-import './Header.css'; // Make sure this CSS file exists and is correctly set up
+import { Link } from 'react-scroll'; 
+import './Header.css'; 
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false); // Define the menuOpen state
@@ -8,7 +8,7 @@ function Header() {
   return (
     <div className={`header ${menuOpen ? 'menu-open' : ''}`}>
       <div>
-        <h2>Rasool Bi Shaik</h2>
+        <h2>RasoolBi.</h2>
       </div>
       <nav>
         <ul>

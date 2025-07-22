@@ -1,77 +1,98 @@
-import React from 'react';
-import './Projects.css'; // Ensure you create the CSS for styling
+import { ArrowRight, ExternalLink } from 'lucide-react';
+import { useState } from 'react';
+import './Projects.css';
 
-const projects = [
-  // {
-  //   title: 'Hire Scope - Job Application Tracker',
-  //   description: 'A web-based platform that helps users manage and prioritize job applications.',
-  //   techStack: 'React.js, Firebase, CSS',
-  //   features: [
-  //     'Application tracking and status updates',
-  //     'Resume and cover letter storage',
-  //     'Automated reminders',
-  //     'Job prioritization with search integrations',
-  //   ],
-  //   link: '#', // Add project link
-  // },
-  // {
-  //   title: 'Mobile Service App',
-  //   description: 'A service platform for booking doorstep mobile repairs and services.',
-  //   techStack: 'React.js, Material UI, PWA',
-  //   features: [
-  //     'Service selection and cost estimation',
-  //     'Doorstep service scheduling',
-  //     'PWA for offline access and mobile responsiveness',
-  //   ],
-  //   link: '#', // Add project link
-  // },
+const projectData = [
   {
-    title: 'Chrome Extension for Lead Categorization',
-    description: 'A Chrome extension that automates lead suggestions and categorization.',
-    techStack: 'JavaScript, Hugging Face API',
-    features: [
-      'AI-driven lead categorization',
-      'Content analysis with automated suggestions',
-      'Chrome notifications for new leads',
-    ],
-    link: 'https://chrome-extension-theta-nine.vercel.app/', // Add project link
+    id: 1,
+    title: "Chrome Extension for Lead Categorization",
+    description: "A Chrome extension that automates lead suggestions and categorization.",
+    techStack: ["JavaScript", "Hugging Face API"],
+    link: "#",
+    image: "/lovable-uploads/5dc4310b-91b6-411d-af0c-1f23277cba8e.png"
   },
   {
-    title: 'Flavours Find - Recipe Discovery App',
-    description: "Flavours Find is an intuitive and interactive recipe discovery application that allows users to explore a wide range of meal options based on ingredients, moods, cooking times, and cuisines. Whether you're looking for comfort food, healthy meals, or quick snacks, this app provides a seamless experience to find your next favorite recipe. It includes features like searching by meal name or ingredients, saving favorite recipes, and browsing through curated meal categories.",
-    techStack: 'React.js, Tailwind CSS , TheMealDB API',
-    features: [
-      'Search recipes by ingredient or meal name.',
-      'Save your favorite recipes for quick access.',
-      'Responsive design for mobile and desktop',
-    ],
-    link: 'https://flavours-findss.vercel.app/', // Add project link
+    id: 2,
+    title: "Flavours Find - Recipe Discovery App",
+    description: "An interactive recipe app that helps users discover meals based on ingredients, mood, cooking time, and cuisine..",
+    techStack: ["React.js", "Tailwind CSS", "TheMealDB API"],
+    link: "https://flavours-findss.vercel.app/",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
   },
+  {
+    id: 3,
+    title: "Portfolio Website",
+    description: "A modern, responsive portfolio website showcasing my skills and projects.",
+    techStack: ["React", "Tailwind CSS", "Framer Motion"],
+    link: "#",
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=800&q=80"
+  }
 ];
 
-const Projects = () => {
+const Project = () => {
+  const [hoveredProject, setHoveredProject] = useState(null);
+
   return (
-    <section className="projects-section" id='projects'>
-      <h2>Projects</h2>
-      <div className="projects-container">
-        {projects.map((project, index) => (
-          <div key={index} className="project-card">
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <p><strong>Tech Stack:</strong> {project.techStack}</p>
-            <ul>
-              {project.features.map((feature, i) => (
-                <li key={i}>{feature}</li>
-              ))}
-            </ul>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">
-              View Project
-            </a>
-          </div>
-        ))}
-      </div>
-    </section>
+    <div className="page-container">
+     
+
+      <section className="projects-section" id="projects">
+        <div className="projects-header">
+          <h2 className="projects-title">Projects</h2>
+          <p className="projects-description">
+            Explore my latest work and technical projects that demonstrate my skills and passion.
+          </p>
+        </div>
+
+        <div className="projects-grid">
+          {projectData.map((project) => (
+            <div 
+              key={project.id}
+              className="project-card"
+              onMouseEnter={() => setHoveredProject(project.id)}
+              onMouseLeave={() => setHoveredProject(null)}
+            >
+              <div className="project-image-container">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className={`project-image ${hoveredProject === project.id ? 'hovered' : ''}`}
+                />
+              </div>
+              <div className="project-content">
+                <div className="project-header">
+                  <h3 className="project-title">{project.title}</h3>
+                </div>
+                <p className="project-description">{project.description}</p>
+
+                <div className="project-footer">
+                  <div className="tech-stack">
+                    {project.techStack.map((tech, idx) => (
+                      <span key={idx} className="tech-tag">{tech}</span>
+                    ))}
+                  </div>
+                  <a 
+                    href={project.link}
+                    className="project-link"
+                  >
+                    View Project
+                    <ArrowRight size={16} className={`arrow-icon ${hoveredProject === project.id ? 'arrow-hovered' : ''}`} />
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* <div className="view-all-container">
+          <a href="#" className="view-all-button">
+            View All Projects
+            <ExternalLink size={18} />
+          </a>
+        </div> */}
+      </section>
+    </div>
   );
 };
 
-export default Projects;
+export default Project;
