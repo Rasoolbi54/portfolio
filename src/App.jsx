@@ -1,26 +1,22 @@
-// App.js
 import React from 'react';
-import Home from './components/Home/Home';
-import About from './components/about/About';
-import Contact from './components/contact/Contact';
-import Projects from './components/projects/Projects';
-import Experience from './components/Experience';
-import Navbar from './components/header/Navbar';
-
-
-
+import Home from './components/Home/Home.jsx';
+import About from './components/about/About.jsx';
+import Contact from './components/contact/Contact.jsx';
+import Projects from './components/projects/Projects.jsx';
+import Experience from './components/Experience.jsx';
+import Navbar from './components/header/Navbar.jsx';
 
 function App() {
   return (
-   <div >
-    <Navbar />
-    <Home/>
-    <About/>
-    <Experience />
-    <Projects/>
-    <Contact/>
-   </div>
-  )
+    <div>
+      <Navbar />
+      <Home />
+      <About />
+      <Experience />
+      <Projects />
+      <Contact />
+    </div>
+  );
 }
 
 export default App;
