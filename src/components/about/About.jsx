@@ -1,94 +1,63 @@
 import React from "react";
-import "./About.css";
+
 
 function About() {
-  const skills = {
-    frontend: [
-      "HTML",
-      "CSS",
-      "Bootstrap",
-      "JavaScript",
-      "React",
-      "Material UI",
-    ],
-    backend: ["PostgreSQL", "Node JS", "Express JS", "MongoDB"],
-    tools: ["VS Code", "GitHub", "Postman", "Git"],
-  };
+  const skills = [
+    "HTML",
+    "CSS",
+    "Bootstrap",
+    "JavaScript",
+    "React",
+    "Git",
+    "Tailwind CSS",
+    "Responsive desgin",
+    
+    "PostgreSQL", "Node JS", "Express JS", "MongoDB",
+    "VS Code", "GitHub", "Postman", ]
+
   return (
-    <div className="about-sec" id="about">
-      <div className="about">
-        <h2>HI! I'm Rasool Bi</h2>
-       <div className="about-grid">
-       <div>
-          <img src="./about.png"/>
-        </div>
-       <div>
-          <p>
-            I'm a certified Full Stack Developer with expertise in frontend
-            technologies such as JavaScript, React.js, HTML, and CSS. I
-            specialize in creating responsive, user-friendly web applications
-            and have developed interactive Chrome extensions. My skill set also
-            extends to backend development using Node.js, allowing me to deliver
-            complete end-to-end solutions.
-          </p>
+    <div className="bg-gray-50 flex justify-center items-center md:px-60 px-10 pt-36 pb-20 text-black">
+      <div>
+        <p className="md:text-6xl  text-5xl font-bold">
+          I’m a full stack developer who codes with curiosity and coffee.
+        </p>
+        <p className="text-xl py-3">
+          Frontend or backend, I love the whole process — from sketching out an
+          idea to seeing it come alive in the browser.
+        </p>
+        <p className="text-xl">
+          I spend most of my time vibecoding: building, breaking, fixing,
+          learning — then doing it all over again. It’s less about chasing
+          perfection, more about building something real{" "}
+          <span className="bg-yellow-300">
+            {" "}
+            (and making sure dark mode feels just right).
+          </span>
+        </p>
 
-          <p>
-            I've worked on projects ranging from e-commerce platforms to
-            productivity tools, and I’m proficient with tools and environments
-            like Git, MongoDB, VS Code, and deployment platforms such as Vercel
-            and Heroku.
-          </p>
+        <p className="text-xl py-3">
+          Whether it's a full web app or a small side project, I’m here for
+          turning ideas into interactive things people can actually use.
+        </p>
 
-          <p>
-            Passionate about crafting dynamic and efficient websites, I also
-            enjoy traveling, spending time with loved ones, and staying updated
-            on the latest tech trends. My long-term goal is to grow in the tech
-            industry and eventually run my own business.
-          </p>
-        </div>
 
-       
-       </div>
+
+
+        <div className="flex flex-wrap gap-2 mt-6 ">
+  {skills.map((skill, index) => (
+    <span
+      key={index}
+      className="border-2 border-black rounded-full py-2 px-5 md:text-xl text-sm"
+    >
+      {skill}
+    </span>
+  ))}
+</div>
+
       </div>
 
-      <div className="skills-section">
-        <h2 className="skills-title">My Skills</h2>
 
-        <div className="skills-container">
-          <div className="skills-box">
-            <h3 className="box-title">Frontend</h3>
-            <div className="skills-list">
-              {skills.frontend.map((skill, index) => (
-                <div key={index} className="skill-item">
-                  {skill}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="skills-box">
-            <h3 className="box-title">Backend</h3>
-            <div className="skills-list">
-              {skills.backend.map((skill, index) => (
-                <div key={index} className="skill-item">
-                  {skill}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="skills-box">
-            <h3 className="box-title">Tools</h3>
-            <div className="skills-list">
-              {skills.tools.map((skill, index) => (
-                <div key={index} className="skill-item">
-                  {skill}
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
+     
     </div>
   );
 }
