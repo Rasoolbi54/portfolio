@@ -4,12 +4,12 @@ import About from './components/about/About.jsx';
 import Contact from './components/contact/Contact.jsx';
 import Projects from './components/projects/Projects.jsx';
 import Experience from './components/Experience.jsx';
-import Navbar from './components/header/Navbar.jsx';
+import Navbar from './components/Navbar.jsx';
 
 function App() {
   return (
     <div>
-      <Navbar />
+     <Navbar />
       <Home />
       <About />
       <Experience />
