@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 import './Header.css'; 
 import { MoonIcon } from 'lucide-react';
 
-function Header() {
+function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false); // Define the menuOpen state
 
   return (
@@ -33,4 +33,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Navbar;

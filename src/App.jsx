@@ -4,15 +4,16 @@ import Home from './components/Home/Home';
 import About from './components/about/About';
 import Contact from './components/contact/Contact';
 import Projects from './components/projects/Projects';
-import Header from './components/header/Header';
 import Experience from './components/Experience';
+import Navbar from './components/header/Navbar';
+
 
 
 
 function App() {
   return (
    <div >
-    <Header />
+    <Navbar />
     <Home/>
     <About/>
     <Experience />
