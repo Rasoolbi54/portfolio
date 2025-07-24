@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll'; 
-import './Header.css'; 
 import { MoonIcon } from 'lucide-react';
 
 function Navbar() {
