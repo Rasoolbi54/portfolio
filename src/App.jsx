@@ -7,16 +7,19 @@ import Experience from './components/Experience.jsx';
 import Navbar from './components/Navbar.jsx';
 
 function App() {
+
+
   return (
-    <div>
-     <Navbar />
-      <Home />
-      <About />
-      <Experience />
-      <Projects />
-      <Contact />
-    </div>
+  <div>
+    <Navbar />
+     <Home />
+    <About />
+    <Experience />
+    <Projects />
+    <Contact />
+  </div>
   );
 }
 
 export default App;
+

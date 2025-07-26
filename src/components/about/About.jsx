@@ -16,7 +16,7 @@ function About() {
     "VS Code", "GitHub", "Postman", ]
 
   return (
-    <div className="bg-gray-50 flex justify-center items-center md:px-60 px-10 pt-36 pb-20 text-black">
+    <div id="about" className="bg-gray-50 text-black dark:text-white dark:bg-black flex justify-center items-center md:px-60 px-10 md:-mt-48 -mt-22 md:pt-36 pt-20 pb-20 ">
       <div>
         <p className="md:text-6xl  text-5xl font-bold">
           I’m a full stack developer who codes with curiosity and coffee.

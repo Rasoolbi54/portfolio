@@ -134,7 +134,7 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <section className="bg-gray-50 text-black py-20 px-10 md:px-60 font-sans">
+    <section className="bg-gray-50 text-black py-20 px-10 md:px-60 font-sans" id="projects">
       <p className="md:text-6xl text-5xl font-bold tracking-tight mb-14 border-b border-black pb-4">
         PROJECTS
       </p>

@@ -1,34 +1,44 @@
-import React, { useState } from 'react';
-import { Link } from 'react-scroll'; 
-import { MoonIcon } from 'lucide-react';
+import React, { useState } from "react";
+import { Link } from "react-scroll";
+import { MoonIcon } from "lucide-react";
+// import ThemeToggle from "./ThemeToggle";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false); // Define the menuOpen state
 
   return (
+    <div className="flex justify-between items-center md:px-20 px-4 py-4   border-b dark:bg-black">
+      <div className="text-3xl md:text-4xl">
+        <span className=" font-bold dark:text-white ">Rasoolbi.</span>
+      </div>
 
-  <div className="flex justify-between items-center md:px-20 px-4 py-4   border-b">
-  <div className="text-3xl md:text-4xl">
-    <span className=" font-bold">Rasoolbi Shaik.</span>
-  </div>
+      <div className="hidden sm:block">
+        <ul className="flex gap-6 text-xl font-bold text-gray-300">
+          <button
+            onClick={() =>
+              document
+                .getElementById("details")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            <li className="hover:text-black cursor-pointer">Home.</li>
+          </button>
+          <button onClick={()=>document.getElementById('about').scrollIntoView({behavior:"smooth"})}>
+            <li className="hover:text-black cursor-pointer">About.</li>
+          </button>
+          <button onClick={()=>document.getElementById('projects').scrollIntoView({behavior:"smooth"})}>
+            <li className="hover:text-black cursor-pointer">Projects.</li>
+          </button>
+          <button onClick={()=>document.getElementById('contact').scrollIntoView({behavior:"smooth"})}>
+            <li className="hover:text-black cursor-pointer">Contact.</li>
+          </button>
+        </ul>
+      </div>
 
-  <div className="hidden sm:block">
-    <ul className="flex gap-6 text-xl font-bold text-gray-300">
-      <li className="hover:text-black cursor-pointer">Home.</li>
-      <li className="hover:text-black cursor-pointer">About.</li>
-      <li className="hover:text-black cursor-pointer">Projects.</li>
-      <li className="hover:text-black cursor-pointer">Contact.</li>
-    </ul>
-  </div>
-
-  <div>
-    <MoonIcon />
-  </div>
-</div>
-
-
-
-    
+      {/* <div>
+        <ThemeToggle />
+      </div> */}
+    </div>
   );
 }
 
